@@ -26,10 +26,10 @@ knitr::opts_chunk$set(#dev.args=list(bg="transparent"),
 
 library(tidyverse)
 library(ggthemes)
-theme_set(theme_solarized(base_size=26))
+theme_set(theme_solarized(base_size=22))
 scale_colour_discrete <- function(...) scale_colour_solarized()
 scale_fill_discrete <- function(...) scale_fill_solarized()
-pal <- solarized_pal()(3)
+pal <- solarized_pal()(8)
 
 txtcolor <- "#586e75"
 ```
@@ -42,6 +42,15 @@ class: center, top
 
 # My talk title here
 
+## Subtitle H2
+
+### H3
+
+#### H4
+
+##### H5 
+
+Text with *emphasis*
 
 <div class="my-footer">
 
@@ -54,6 +63,23 @@ class: center, top
 ---
 
 # First Slide
+
+.pull-left[
+
+- bulleted list
+- the bullets are invisible
+- that's nicer for centered text
+
+]
+.pull-right[
+
+```{r fig.width=6, fig.height=4}
+ggplot(mtcars, aes(cyl, mpg, fill=as.factor(cyl))) +
+  geom_bar(stat="identity", show.legend = FALSE) + 
+  ggtitle("Not mtcars again!")
+```
+]
+
 
 ---
 
